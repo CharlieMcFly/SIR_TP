@@ -35,11 +35,18 @@ public class LogParser {
 	 * @param 1 of 2, users or categories
 	 * @return list of one of them
 	 */
-	public Set<String> linesToList(int type){
+	public Set<String> linesToList(int type){		
+		
 		try (Stream<String> stream = Files.lines(Paths.get(this.filename))) {
+			
 			return stream.map(line -> line.split(";")[type]).collect(Collectors.toSet());
+		
 		} catch (IOException e) {
 			throw new SIRException("Error : Problem with linesToList function", e);
+		} catch (NullPointerException e){
+			throw new SIRException("Error : The filename is null or wrong",e);
+		} catch (ArrayIndexOutOfBoundsException e){
+			throw new SIRException("Error : Out of the Split section", e);
 		}
 	}
 	
@@ -51,6 +58,8 @@ public class LogParser {
 	 * @return matrix of 2 list
 	 */
 	public long[][] linesToMatrice(Set<String> users, Set<String> cats){
+		if(users == null || cats == null)
+			throw new SIRException("Error : Arguments are null : users "+users+" or cats "+cats);
 		long [][] matrice = new long[users.size()][cats.size()]; 
 		Stream<String> stream ;
 		try{
@@ -73,6 +82,10 @@ public class LogParser {
 			return matrice;
 		} catch (IOException e) {
 			throw new SIRException("Error : Problem with linesToList function", e);
+		}catch (NullPointerException e){
+			throw new SIRException("Error : The filename is null or wrong",e);
+		} catch (ArrayIndexOutOfBoundsException e){
+			throw new SIRException("Error : Out of the Split section", e);
 		}
 	}
 }

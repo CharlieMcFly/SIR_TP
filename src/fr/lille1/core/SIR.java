@@ -11,16 +11,24 @@ import fr.lille1.writer.SIRWriter;
  * @author Charlie
  *
  */
-public class Application {
+public class SIR {
 
 	public static final int USER = 1;
 	public static final int CATEGORIE = 2;
+	private String destination;
+	private String filename;
 	
-	public static void main(String[] args) {
+	public SIR(String destination, String filename){
+		this.destination = destination;
+		this.filename = filename;
+	}
+	
+	/**
+	 * Execute the class
+	 */
+	public void execute() {
 		
-		String destination = "../SIR_TP1/resources/";
-		String filename = destination + "Log-clients-themes.txt";
-		LogParser log = new LogParser(filename);
+		LogParser log = new LogParser(destination + filename);
 		Set<String> users = log.linesToList(USER);
 		Set<String> categories = log.linesToList(CATEGORIE);
 		long[][] matrice = log.linesToMatrice(users, categories);
@@ -28,7 +36,6 @@ public class Application {
 		writer.listToFile(users, "users.txt");
 		writer.listToFile(categories, "categories.txt");
 		writer.matriceToFile(matrice, "MUT.txt");
-		System.out.println("------ END ------");
 	}
 	
 }

@@ -10,4 +10,16 @@ public class SIRException extends RuntimeException {
 		super(message, e);
 	}
 
+	public SIRException(String message, NullPointerException e) {
+		super(message, e);
+	}
+
+	public SIRException(String message, ArrayIndexOutOfBoundsException e) {
+		super(message, e);
+	}
+
+	public SIRException(String message) {
+		super(message);
+	}
+
 }
