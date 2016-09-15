@@ -1,16 +1,24 @@
 #SIR_TP1
---- SIR ---
-e-commerce
-prescripteur ( personne donnant un avis sur un achat )
-si trop de choix ( risque de ne pas acheter )
-loi de gauss
---- TP ---
-Liste des utilisateurs (pas de doublon)
-Liste des thÃ¨mes (pas de doublon)
-Matrice de chiffre relation entre utilisateur et les thÃ¨mes
--- Application -- 
-Allez chercher un chiffre dans la matrice doit pouvoir rÃ©cupÃ©rer un utiliseur et un thÃ¨me
-			Bricolage		Jeux		Repas
-Alice			8				5			2
-Bob			15				7			3
-Charlie 		5				8			9
+
+###Update n°1  
+
+Le but de ce TP, est de parser un fichier log en 3 autres fichiers : 
+	
+	1°) Reprends tous les utilisateurs
+	2°) Reprends toutes les catégories (thèmes)
+	3°) Reprends une matrice qui contient le nombre de fois que l'utilisateur a regardé le thème
+	
+La matrice est composée comme suit : 
+
+Sur l'horizontal, les différents thèmes.
+
+Sur la vertical, les différents utilisateurs.
+
+			|	Bricolage	|	Jardinage	|	...
+	Julie	|	15		|	25		|
+	Marc 	|	25		|	16		|
+	...	|	...		|	...		|
+	
+###Update n°2
+
+	
