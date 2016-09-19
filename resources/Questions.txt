@@ -1,0 +1,14 @@
+Question 1 : 
+
+- Il y a 9 utilisateurs et 5 produits
+
+Question 2 :
+
+- Il n'y a pas de clients le plus fidèle, car ils ont tous le même nombre d'achat
+- Le bricolage, le jardinage et la Photo-vidéo
+
+Question 3 :
+
+- Une partie des clients savent ce qu'ils veulent acheter.
+- Une autre partie ne sait pas ce qu'ils veulent.
+

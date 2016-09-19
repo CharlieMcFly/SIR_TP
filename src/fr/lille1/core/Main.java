@@ -6,7 +6,7 @@ public class Main {
 		String destination = "../SIR_TP1/resources/";
 		String filename = "Log-clients-themes.txt";
 		SIR sir = new SIR(destination, filename);
-		sir.execute();
+		sir.analyze();
 	}
 
 }

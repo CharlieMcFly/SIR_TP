@@ -35,7 +35,7 @@ public class LogParser {
 	 * @param 1 of 2, users or categories
 	 * @return list of one of them
 	 */
-	public Set<String> linesToList(int type){		
+	public Set<String> linesToList(int type){
 		
 		try (Stream<String> stream = Files.lines(Paths.get(this.filename))) {
 			

@@ -53,7 +53,7 @@ public class SIRWriter {
 	        BufferedWriter bw = new BufferedWriter(new FileWriter(destination + filename));
 	        for (int i = 0; i < myMatrice.length; i++) {
 	            for (int j = 0; j < myMatrice[i].length; j++) {
-	                bw.write(myMatrice[i][j] + ((j == myMatrice[i].length-1) ? "" : "\t"));
+	                bw.write(myMatrice[i][j] + ((j == myMatrice[i].length-1) ? "" : ";"));
 	            }
 	            bw.newLine();
 	        }
